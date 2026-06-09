@@ -1,0 +1,41 @@
+stages:
+  - validate
+  - release
+
+image: node:24
+
+variables:
+  ENABLE_CI: "true"
+  ENABLE_RELEASE: "false"
+  NPM_CONFIG_CACHE: ".npm"
+
+cache:
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - .npm/
+
+before_script:
+  - npm ci --cache .npm --prefer-offline
+
+validate:
+  stage: validate
+  rules:
+    - if: '$ENABLE_CI == "false"'
+      when: never
+    - when: on_success
+  script:
+    - npm run ci:validate
+
+release:
+  stage: release
+  needs:
+    - job: validate
+      optional: true
+  rules:
+    - if: '$ENABLE_RELEASE == "true" && $ENABLE_CI != "false" && $CI_COMMIT_BRANCH == "main"'
+      when: on_success
+    - when: never
+  script:
+    - npm run release:gitlab
