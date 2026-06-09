@@ -1,0 +1,13 @@
+{
+  "errors": {
+    "app": {
+      "title": "Something went wrong",
+      "description": "Refresh the page or try again later.",
+      "retry": "Try again"
+    },
+    "network": {
+      "title": "Network error",
+      "description": "Check your internet connection."
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use './breakpoints' as *;
+
+@mixin media-up($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value == null {
+    @error 'Unknown breakpoint: #{$breakpoint}';
+  }
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(50%);
+}

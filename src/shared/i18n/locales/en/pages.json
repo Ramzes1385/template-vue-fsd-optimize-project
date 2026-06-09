@@ -1,0 +1,13 @@
+{
+  "pages": {
+    "home": {
+      "title": "Home"
+    },
+    "login": {
+      "title": "Login"
+    },
+    "profile": {
+      "title": "Profile"
+    }
+  }
+}
