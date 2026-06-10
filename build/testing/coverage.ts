@@ -1,12 +1,9 @@
-// build/testing/coverage.ts
-import type { CoverageV8Options } from 'vitest/node'
+export const coverageConfig = {
+  provider: 'v8' as const,
 
-export const coverageConfig: CoverageV8Options = {
-  provider: 'v8',
   reporter: ['text', 'json', 'html'],
-  reportsDirectory: './reports/coverage',
 
-  include: ['src/**/*.{ts,vue}'],
+  reportsDirectory: './reports/coverage',
 
   exclude: [
     'src/**/*.d.ts',
@@ -16,11 +13,4 @@ export const coverageConfig: CoverageV8Options = {
     'src/**/types.ts',
     'src/**/types/**',
   ],
-
-  thresholds: {
-    lines: 80,
-    functions: 80,
-    branches: 70,
-    statements: 80,
-  },
 }

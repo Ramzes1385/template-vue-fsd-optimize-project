@@ -1,4 +1,3 @@
-// vitest.config.ts
-import { vitestConfig } from './build/testing/vitest';
+import { vitestConfig } from './build/testing'
 
-export default vitestConfig;
+export default vitestConfig

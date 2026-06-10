@@ -1,4 +1,3 @@
-// playwright.config.ts
-import { playwrightConfig } from './build/testing/playwright'
+import { playwrightConfig } from './build/testing'
 
 export default playwrightConfig
