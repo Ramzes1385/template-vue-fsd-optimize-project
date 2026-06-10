@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/Ramzes1385/template-vue-fsd-optimize-project/compare/v1.0.0...v1.1.0) (2026-06-10)
+
+### Features
+
+- **template:** добавить архитектурные ограничения FSD ([512d8df](https://github.com/Ramzes1385/template-vue-fsd-optimize-project/commit/512d8df55183922025a39a6154242e2326944ef7))
+
 ## 1.0.0 (2026-06-09)
 
 ### Features
