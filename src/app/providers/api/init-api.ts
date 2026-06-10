@@ -1,24 +1,38 @@
-import { useSessionStore } from '@entities/session';
-import { httpClient, normalizeApiError } from '@shared/api';
-import { reportError } from '@shared/lib/error';
+import { AxiosHeaders } from 'axios'
+
+import { useSessionStore } from '@entities/session'
+import { httpClient, normalizeApiError } from '@shared/api'
+import { reportError } from '@shared/lib/error'
+
+let isApiInitialized = false
 
 export function initApi() {
-  httpClient.interceptors.request.use((config) => {
-    const session = useSessionStore();
+  if (isApiInitialized) {
+    return
+  }
+
+  isApiInitialized = true
+
+  httpClient.interceptors.request.use(config => {
+    const session = useSessionStore()
 
     if (session.accessToken) {
-      config.headers.Authorization = `Bearer ${session.accessToken}`;
+      config.headers = AxiosHeaders.from(config.headers)
+
+      config.headers.set('Authorization', `Bearer ${session.accessToken}`)
     }
 
-    return config;
-  });
+    return config
+  })
 
   httpClient.interceptors.response.use(
-    (response) => response,
-    (error: unknown) => {
-      reportError(normalizeApiError(error));
+    response => response,
+    error => {
+      const appError = normalizeApiError(error)
 
-      return Promise.reject(error);
+      reportError(appError)
+
+      return Promise.reject(appError)
     },
-  );
+  )
 }

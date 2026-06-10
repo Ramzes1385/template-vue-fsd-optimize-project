@@ -1,8 +1,8 @@
-export const AppRoutes = {
+export const AppRoutePath = {
   home: '/',
   login: '/login',
   profile: '/profile',
 } as const
 
-export type AppRouteName = keyof typeof AppRoutes
-export type AppRoutePath = (typeof AppRoutes)[AppRouteName]
+export type AppRouteName = keyof typeof AppRoutePath
+export type AppRoutePathValue = (typeof AppRoutePath)[AppRouteName]

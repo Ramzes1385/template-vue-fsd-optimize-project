@@ -1,21 +1,21 @@
-import type { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router'
 
-import { AppRoutes } from '@shared/config/routes';
+import { AppRoutePath } from '@shared/config/routes'
 
 export const routes: RouteRecordRaw[] = [
   {
-    path: AppRoutes.home,
+    path: AppRoutePath.home,
     name: 'home',
-    component: () => import('@pages/home/ui/HomePage.vue'),
+    component: () => import('@pages/home').then((module) => module.HomePage),
   },
   {
-    path: AppRoutes.login,
+    path: AppRoutePath.login,
     name: 'login',
-    component: () => import('@pages/login/ui/LoginPage.vue'),
+    component: () => import('@pages/login').then((module) => module.LoginPage),
   },
   {
-    path: AppRoutes.profile,
+    path: AppRoutePath.profile,
     name: 'profile',
-    component: () => import('@pages/profile/ui/ProfilePage.vue'),
+    component: () => import('@pages/profile').then((module) => module.ProfilePage),
   },
-];
+]

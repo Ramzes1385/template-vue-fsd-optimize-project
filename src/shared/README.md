@@ -345,7 +345,7 @@ styles/
 Глобальные стили приложения лежат в:
 
 ```txt
-app/styles/
+shared/styles/
 ```
 
 ## `styles/vendors/ui-kit.scss`

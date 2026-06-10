@@ -3,7 +3,7 @@ import { constants } from 'node:zlib'
 
 import vue from '@vitejs/plugin-vue'
 import { visualizer } from 'rollup-plugin-visualizer'
-import { compression } from 'vite-plugin-compression2'
+import { compression, defineAlgorithm } from 'vite-plugin-compression2'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 export function createVitePlugins() {
@@ -42,22 +42,18 @@ export function createVitePlugins() {
     }),
 
     compression({
-      algorithm: 'gzip',
-      threshold: 10240,
-      deleteOriginalAssets: false,
-      skipIfLargerOrEqual: true,
-    }),
+      algorithms: [
+        'gzip',
 
-    compression({
-      algorithm: 'brotliCompress',
+        defineAlgorithm('brotliCompress', {
+          params: {
+            [constants.BROTLI_PARAM_QUALITY]: 11,
+          },
+        }),
+      ],
       threshold: 10240,
       deleteOriginalAssets: false,
       skipIfLargerOrEqual: true,
-      compressionOptions: {
-        params: {
-          [constants.BROTLI_PARAM_QUALITY]: 11,
-        },
-      },
     }),
 
     visualizer({

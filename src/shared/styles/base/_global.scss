@@ -1,0 +1,14 @@
+@use '../tokens' as *;
+
+:root {
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-bg-primary: #{$color-bg-primary};
+  --color-border-primary: #{$color-border-primary};
+
+  --font-family-base: #{$font-family-base};
+
+  --z-index-dropdown: #{$z-index-dropdown};
+  --z-index-modal: #{$z-index-modal};
+  --z-index-toast: #{$z-index-toast};
+}
