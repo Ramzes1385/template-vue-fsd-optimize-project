@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/Ramzes1385/template-vue-fsd-optimize-project/compare/v1.1.0...v1.1.1) (2026-06-11)
+
+### Bug Fixes
+
+- render routes through app layout ([1ca0cd3](https://github.com/Ramzes1385/template-vue-fsd-optimize-project/commit/1ca0cd349f0ee830f28daca9f7d714f1b6818ae3))
+
 ## [1.1.0](https://github.com/Ramzes1385/template-vue-fsd-optimize-project/compare/v1.0.0...v1.1.0) (2026-06-10)
 
 ### Features
