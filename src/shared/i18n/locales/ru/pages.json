@@ -1,13 +1,22 @@
 {
   "pages": {
     "home": {
-      "title": "Главная"
+      "title": "Главная",
+      "subtitle": "Добро пожаловать в шаблон Vue FSD с Rise-UI-KIT"
     },
     "login": {
-      "title": "Вход"
+      "title": "Вход",
+      "subtitle": "Войдите в свой аккаунт",
+      "no_account": "Нет аккаунта?",
+      "forgot_password": "Забыли пароль?",
+      "error_invalid": "Неверный email или пароль"
     },
     "profile": {
-      "title": "Профиль"
+      "title": "Профиль",
+      "subtitle": "Управление аккаунтом",
+      "tab_general": "Общее",
+      "tab_settings": "Настройки",
+      "tab_notifications_tab": "Уведомления"
     }
   }
 }

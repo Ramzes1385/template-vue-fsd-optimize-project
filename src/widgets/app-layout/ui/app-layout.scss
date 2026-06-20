@@ -1,9 +1,11 @@
 .app-layout {
+  display: flex;
   min-height: 100vh;
   background: var(--color-bg-primary);
 
   &__content {
-    width: 100%;
+    flex: 1;
     min-height: 100vh;
+    padding: 24px;
   }
 }

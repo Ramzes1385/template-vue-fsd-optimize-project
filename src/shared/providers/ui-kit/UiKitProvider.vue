@@ -1,14 +1,7 @@
 <script setup lang="ts">
-// пример:
-// import { UiProvider } from '@your/ui-kit';
+import '@ramzes1385/rise-ui-kit/styles'
 </script>
 
 <template>
-  <!--
-  <UiProvider>
-    <slot />
-  </UiProvider>
-  -->
-
   <slot />
 </template>

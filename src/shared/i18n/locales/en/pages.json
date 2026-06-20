@@ -1,13 +1,22 @@
 {
   "pages": {
     "home": {
-      "title": "Home"
+      "title": "Home",
+      "subtitle": "Welcome to the Vue FSD template with Rise-UI-KIT"
     },
     "login": {
-      "title": "Login"
+      "title": "Login",
+      "subtitle": "Sign in to your account",
+      "no_account": "Don't have an account?",
+      "forgot_password": "Forgot password?",
+      "error_invalid": "Invalid email or password"
     },
     "profile": {
-      "title": "Profile"
+      "title": "Profile",
+      "subtitle": "Account management",
+      "tab_general": "General",
+      "tab_settings": "Settings",
+      "tab_notifications_tab": "Notifications"
     }
   }
 }

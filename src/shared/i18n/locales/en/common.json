@@ -3,6 +3,21 @@
     "loading": "Loading",
     "save": "Save",
     "cancel": "Cancel",
-    "retry": "Try again"
+    "retry": "Try again",
+    "submit": "Submit",
+    "email": "Email",
+    "password": "Password",
+    "language": "Language",
+    "logout": "Logout",
+    "settings": "Settings",
+    "general": "General",
+    "notifications": "Notifications",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "online": "Online",
+    "role": "Role",
+    "member_since": "Member since"
   }
 }
