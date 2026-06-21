@@ -22,5 +22,6 @@ const isCollapsed = ref(false)
     active-match="exact"
     link-component="RouterLink"
     :is-collapsible="true"
+    :custom-class="{ root: 'sidebar--themed', header: 'sidebar__header--bold' }"
   />
 </template>
