@@ -2,8 +2,8 @@
 import { BaseSideBar } from '@ramzes1385/rise-ui-kit'
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
+
 import { sidebarItems } from '../model/navigation'
-import './app-sidebar.scss'
 
 defineOptions({
   name: 'AppSidebar',
@@ -22,9 +22,5 @@ const isCollapsed = ref(false)
     active-match="exact"
     link-component="RouterLink"
     :is-collapsible="true"
-    class="app-sidebar"
-    :custom-class="{
-      header: 'app-sidebar__header',
-    }"
   />
 </template>

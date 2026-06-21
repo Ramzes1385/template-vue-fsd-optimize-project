@@ -63,7 +63,7 @@ const tabItems = [
       <div class="home-page__row">
         <BaseButton>Default</BaseButton>
         <BaseButton variant="outline">Outline</BaseButton>
-        <BaseButton variant="ghost" custom-class="my-custom-btn">Ghost</BaseButton>
+        <BaseButton variant="ghost">Ghost</BaseButton>
         <BaseButton variant="soft">Soft</BaseButton>
         <BaseButton variant="shadow">Shadow</BaseButton>
         <BaseButton is-disabled>Disabled</BaseButton>
@@ -74,11 +74,7 @@ const tabItems = [
     <section class="home-page__section">
       <h2>Cards</h2>
       <div class="home-page__row">
-        <BaseCard
-          title="Default Card"
-          subtitle="Card subtitle"
-          :custom-class="{ root: 'card--custom', header: 'card__header--blue', title: 'card__title--bold' }"
-        >
+        <BaseCard title="Default Card" subtitle="Card subtitle">
           <p>Card content with Rise-UI-KIT components.</p>
         </BaseCard>
         <BaseCard title="Hoverable" variant="outline" :is-hoverable="true">
@@ -114,12 +110,11 @@ const tabItems = [
     <section class="home-page__section">
       <h2>Input</h2>
       <BaseInput
-          v-model="inputValue"
-          label="Search"
-          placeholder="Type something..."
-          variant="outline"
-          :custom-class="{ root: 'input--wide', field: 'input__field--large', label: 'input__label--accent' }"
-        />
+        v-model="inputValue"
+        label="Search"
+        placeholder="Type something..."
+        variant="outline"
+      />
     </section>
 
     <section class="home-page__section">
@@ -160,10 +155,9 @@ const tabItems = [
       <h2>Modal</h2>
       <BaseButton @click="isModalOpen = true">Open Modal</BaseButton>
       <BaseModal
-          v-model:is-open="isModalOpen"
-          title="Example Modal"
-          :custom-class="{ root: 'modal--wide', header: 'modal__header--dark', body: 'modal__body--padded' }"
-        >
+        v-model:is-open="isModalOpen"
+        title="Example Modal"
+      >
         <p>Modal content from Rise-UI-KIT.</p>
         <template #footer>
           <BaseButton variant="ghost" @click="isModalOpen = false">
